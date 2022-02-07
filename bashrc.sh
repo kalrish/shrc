@@ -234,6 +234,8 @@ then
 	HISTIGNORE=''
 	# Do not remove any entries from the history file
 	HISTFILESIZE=-1
+	# Remember every command in the in-memory history list
+	HISTSIZE=-1
 
 	PROMPT_COMMAND=_prompt_command
 
