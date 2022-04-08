@@ -218,6 +218,10 @@ then
 
 	_git_prompt
 
+	set \
+		-o ignoreeof \
+		#
+
 	shopt \
 		-s \
 		-- \
