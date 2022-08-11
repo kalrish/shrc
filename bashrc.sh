@@ -26,6 +26,10 @@ declare \
 	-- \
 	_environment_variables=(
 
+		# Have the AWS CLI follow the [XDG Base Directory Specification][] and load its "less sensitive configuration options" from a file in `${XDG_CONFIG_HOME}`.
+		# https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-files#cli-configure-files-where
+		"AWS_CONFIG_FILE=${XDG_CONFIG_HOME:-${HOME}/.config}/aws/config.ini"
+
 		# Sign Debian packages with the following OpenPGP key.
 		# man:dpkg-buildpackage(1)
 		DEB_SIGN_KEYID=32884194D7B577F098AA6E5E4BCC1BAF73B8B7E8
