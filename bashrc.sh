@@ -35,9 +35,9 @@ declare \
 		# man:dpkg-sig(1)
 		DEBSIGN_KEYID=32884194D7B577F098AA6E5E4BCC1BAF73B8B7E8
 
-		# Have the Kubernetes command line tool (`kubectl`) follow the [XDG Base Directory Specification][] and load its configuration from `${XDG_CONFIG_HOME}` instead of `${HOME}/.kube/config`.
+		# Have the Kubernetes command line tool (`kubectl`) follow the [XDG Base Directory Specification][] and load its configuration not only from its default of `${HOME}/.kube/config`, but also from `${XDG_CONFIG_HOME}`, with the former having priority to allow for site-specific overrides.
 		# https://kubernetes.io/docs/concepts/configuration/organize-cluster-access-kubeconfig/
-		"KUBECONFIG=${XDG_CONFIG_HOME:-${HOME}/.config}/k8s/config.yaml"
+		"KUBECONFIG=${HOME}/.kube/config:${XDG_CONFIG_HOME:-${HOME}/.config}/k8s/config.yaml"
 
 	) \
 	#
