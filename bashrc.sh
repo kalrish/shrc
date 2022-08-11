@@ -259,6 +259,7 @@ then
 
 
 	# User functions and aliases
+	# These should be made available only to interactive sessions, because scripts usually should not rely on non-standard functionality.
 
 	alias \
 		-- \
