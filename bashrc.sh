@@ -266,6 +266,21 @@ then
 	PS2='\[${_term_color_foreground_gray}\]>\[${_term_reset}\] '
 
 
+	# Load bash-completion
+	# Loading bash-completion in the personal initialization script is not necessary on distributions that:
+	#  - build Bash with `-DSYS_BASHRC=`, by which Bash loads the script at the specified path, often `/etc/bash.bashrc`, in addition to the personal initialization script; and
+	#  - ship a system initialization script at the specified path that loads bash-completion.
+	# Arch does this.
+	# For a Bash initialization script to be compatible with all distributions, however, it must load bash-completion itself.
+	if [[ -r /usr/share/bash-completion/bash_completion ]]
+	then
+		source \
+			-- \
+			/usr/share/bash-completion/bash_completion \
+			#
+	fi
+
+
 	# User functions and aliases
 	# These should be made available only to interactive sessions, because scripts usually should not rely on non-standard functionality.
 
