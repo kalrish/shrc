@@ -31,10 +31,6 @@ declare \
 		"AWS_CONFIG_FILE=${XDG_CONFIG_HOME:-${HOME}/.config}/aws/config.ini"
 
 		# Sign Debian packages with the following OpenPGP key.
-		# man:dpkg-buildpackage(1)
-		DEB_SIGN_KEYID=32884194D7B577F098AA6E5E4BCC1BAF73B8B7E8
-
-		# Sign Debian packages with the following OpenPGP key.
 		# man:debsign(1)
 		# man:dpkg-sig(1)
 		DEBSIGN_KEYID=32884194D7B577F098AA6E5E4BCC1BAF73B8B7E8
