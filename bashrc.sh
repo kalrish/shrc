@@ -277,6 +277,21 @@ then
 	fi
 
 
+	if command_available gpgconf
+	then
+		export \
+			-- \
+			SSH_AUTH_SOCK="$(
+				gpgconf \
+					--list-dirs \
+					-- \
+					agent-ssh-socket \
+					#
+			)" \
+			#
+	fi
+
+
 	# User functions and aliases
 	# These should be made available only to interactive sessions, because scripts usually should not rely on non-standard functionality.
 
