@@ -327,6 +327,7 @@ then
 			-R \
 			--exclude-dir .git \
 			--exclude-dir .tup \
+			--exclude-dir=node_modules \
 			-C 3 \
 			-- \
 			"$1" \
