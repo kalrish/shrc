@@ -39,6 +39,11 @@ declare \
 		# https://kubernetes.io/docs/concepts/configuration/organize-cluster-access-kubeconfig/
 		"KUBECONFIG=${HOME}/.kube/config:${XDG_CONFIG_HOME:-${HOME}/.config}/k8s/config.yaml"
 
+		# Have the npm CLI follow the [XDG Base Directory Specification][] and load my user configuration from a file in `${XDG_CONFIG_HOME}`.
+		# https://docs.npmjs.com/cli/v10/configuring-npm/npmrc
+		# https://docs.npmjs.com/cli/v10/using-npm/config#environment-variables
+		"npm_config_userconfig=${XDG_CONFIG_HOME:-${HOME}/.config}/npm/npmrc"
+
 	) \
 	#
 
