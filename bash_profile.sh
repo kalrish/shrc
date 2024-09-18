@@ -10,3 +10,11 @@ if [[ -f ~/.profile ]]
 then
 	source -- ~/.profile
 fi
+
+
+# Bash sources `~/.bashrc` only when invoked as a non-login shell and ignores the script when started as a login shell.
+# Source `~/.bashrc` on Bash login shells too
+if [[ -f ~/.bashrc ]]
+then
+	source -- ~/.bashrc
+fi
