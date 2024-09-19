@@ -33,7 +33,7 @@ declare \
 		# Sign Debian packages with the following OpenPGP key.
 		# man:debsign(1)
 		# man:dpkg-sig(1)
-		DEBSIGN_KEYID=32884194D7B577F098AA6E5E4BCC1BAF73B8B7E8
+		DEBSIGN_KEYID=E0C3497126B72CA47975FC322953BB8C16043B43
 
 		# Have the Kubernetes command line tool (`kubectl`) follow the [XDG Base Directory Specification][] and load its configuration not only from its default of `${HOME}/.kube/config`, but also from `${XDG_CONFIG_HOME}`, with the former having priority to allow for site-specific overrides.
 		# https://kubernetes.io/docs/concepts/configuration/organize-cluster-access-kubeconfig/
