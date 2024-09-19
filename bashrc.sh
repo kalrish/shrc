@@ -44,6 +44,12 @@ declare \
 		# https://docs.npmjs.com/cli/v10/using-npm/config#environment-variables
 		"npm_config_userconfig=${XDG_CONFIG_HOME:-${HOME}/.config}/npm/npmrc"
 
+		# Have GNU core utilities (coreutils) render dates according to RFC 3339 by default,
+		# separating dates and times with a space instead of a 'T' for better readability.
+		# info:(coreutils)Formatting_file_timestamps
+		# info:(coreutils)Date_format_specifiers
+		TIME_STYLE='+%F %T%:z'
+
 	) \
 	#
 
