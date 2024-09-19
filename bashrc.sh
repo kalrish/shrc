@@ -35,6 +35,10 @@ declare \
 		# man:dpkg-sig(1)
 		DEBSIGN_KEYID=E0C3497126B72CA47975FC322953BB8C16043B43
 
+		# Have the GNU Readline library load my initialization file from `${XDG_CONFIG_HOME}`.
+		# man:readline(3)
+		"INPUTRC=${XDG_CONFIG_HOME:-${HOME}/.config}/readline/inputrc"
+
 		# Have the Kubernetes command line tool (`kubectl`) follow the [XDG Base Directory Specification][] and load its configuration not only from its default of `${HOME}/.kube/config`, but also from `${XDG_CONFIG_HOME}`, with the former having priority to allow for site-specific overrides.
 		# https://kubernetes.io/docs/concepts/configuration/organize-cluster-access-kubeconfig/
 		"KUBECONFIG=${HOME}/.kube/config:${XDG_CONFIG_HOME:-${HOME}/.config}/k8s/config.yaml"
