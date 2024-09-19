@@ -9,6 +9,13 @@
 # unless Bash is given the option `--norc`.
 
 
+# This function is defined for non-interactive shells and named without the underscore prefix because I may it myself.
+function command_available
+{
+	command -v -- "${1}"
+} &> /dev/null
+
+
 # This is executed by all interactive bash shells on startup,
 # including some (e.g. scp and rcp) that don't expect any output.
 # $- expands to the current option flags, that is:
