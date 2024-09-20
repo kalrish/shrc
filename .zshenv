@@ -8,3 +8,11 @@
 # man:zsh(1)
 # https://specifications.freedesktop.org/basedir-spec/latest/
 ZDOTDIR="${XDG_CONFIG_HOME:-${HOME}/.config}/zsh"
+
+# Execute startup script for POSIX shells.
+#
+# https://specifications.freedesktop.org/basedir-spec/latest/
+. \
+	-- \
+	"${XDG_CONFIG_HOME:-${HOME}/.config}/sh/startup.sh" \
+	#
