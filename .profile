@@ -14,3 +14,10 @@
 . \
 	"${XDG_CONFIG_HOME:-${HOME}/.config}/sh/startup.sh" \
 	#
+
+# Execute startup script for POSIX shells invoked as login shells.
+#
+# https://specifications.freedesktop.org/basedir-spec/latest/
+. \
+	"${XDG_CONFIG_HOME:-${HOME}/.config}/sh/login.sh" \
+	#
