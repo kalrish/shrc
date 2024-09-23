@@ -7,6 +7,12 @@ This repository contains startup and shutdown scripts for [command-line shells][
 - the [KornShell (**ksh**)][command-line shell ksh]; and
 - [**Zsh**][command-line shell zsh].
 
+Install the scripts in this repository after cloning it and checking it out with the following command:
+
+```Shell
+ln --verbose --symbolic --relative --target-directory="${HOME}" -- .bash* .kshrc .profile .zshenv
+```
+
 
 [command-line shell bash]: https://www.gnu.org/software/bash/
 [command-line shell dash]: http://gondor.apana.org.au/~herbert/dash/
