@@ -2,3 +2,11 @@
 #
 # man:ksh(1)
 
+
+# Execute startup script for POSIX shells.
+#
+# https://specifications.freedesktop.org/basedir-spec/latest/
+. \
+	-- \
+	"${XDG_CONFIG_HOME:-${HOME}/.config}/sh/startup.sh" \
+	#
